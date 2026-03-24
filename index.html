@@ -305,8 +305,10 @@
 
         /* Media */
         @media (max-width: 1024px) {
-            #ui-layer { flex-direction: column; }
+            body { overflow: auto; }
+            #ui-layer { display: block; height: auto; min-height: 100vh; }
             #left-sidebar { width: 100%; height: auto; border-right: none; padding: 1.5rem; }
+            #right-content { width: 100%; height: auto; overflow: visible; padding: 1.5rem; }
             #case-study-drawer { width: 100%; }
             .drawer-content { padding: 2rem; }
             .drawer-content h2 { font-size: 2rem; }

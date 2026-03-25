@@ -250,7 +250,7 @@ function openFullscreen(item) {
                 ar ar-modes="webxr scene-viewer quick-look" 
                 class="w-full h-full bg-[#111]"
             >
-                <button slot="ar-button" class="absolute bottom-10 left-1/2 -translate-x-1/2 bg-accent text-black font-bold px-8 py-3 rounded-full shadow-[0_0_20px_#00c3ff] tracking-widest uppercase text-sm active:scale-95 transition-transform z-50 flex items-center gap-3">
+                <button slot="ar-button" class="absolute bottom-16 left-1/2 -translate-x-1/2 bg-accent text-black font-bold px-8 py-3 rounded-full shadow-[0_0_20px_#00c3ff] tracking-widest uppercase text-sm active:scale-95 transition-transform z-50 flex items-center gap-3">
                     <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                     Try in AR
                 </button>

@@ -106,13 +106,17 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 3rem 2rem;
+            padding: 3rem 2rem 6rem 2rem; /* Extra bottom padding to prevent monitor cutoff */
             border-right: 1px solid rgba(255,255,255,0.05);
             background: rgba(5,5,5,0.4);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             flex-shrink: 0;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scrollbar-width: none;
         }
+        #left-sidebar::-webkit-scrollbar { display: none; }
 
         .cat-btn {
             display: block;
@@ -193,7 +197,7 @@
         }
 
         .typo-title {
-            font-size: clamp(2rem, 3.5vw, 4rem);
+            font-size: clamp(1.8rem, 2.5vw, 3.2rem);
             font-weight: 800;
             line-height: 1.1;
             text-transform: uppercase;
@@ -226,13 +230,14 @@
             position: fixed;
             top: 0;
             right: 0;
-            width: clamp(600px, 65vw, 1200px);
+            width: calc(100vw - clamp(300px, 25vw, 400px)); /* Perfectly docks to the Left Sidebar! */
             height: 100vh;
             background: #0f1016; /* Solid dark background */
             z-index: 50;
             transform: translateX(100%);
             transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
             box-shadow: -20px 0 50px rgba(0,0,0,0.5);
+            border-left: 1px solid rgba(255,255,255,0.05); /* Sleek separator line */
             display: flex;
             flex-direction: column;
             overflow: hidden;
@@ -330,12 +335,12 @@
         <aside id="left-sidebar">
             <div>
                 <!-- Logo -->
-                <a href="#" class="block w-28 md:w-36 mb-8">
+                <a href="#" class="block w-28 md:w-36 mb-6">
                     <img src="loghi/logo.png" alt="MORE Logo" class="w-full h-auto object-contain">
                 </a>
                 
                 <!-- Page Title -->
-                <div class="mb-12">
+                <div class="mb-8">
                     <h2 class="font-extrabold text-white tracking-tight mb-1" style="font-family: 'Inter', sans-serif; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">XR SOLUTIONS</h2>
                     <p class="text-[0.75rem] text-secondary font-light tracking-wide italic leading-snug">Enterprise XR applications and custom development</p>
                 </div>

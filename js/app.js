@@ -86,7 +86,14 @@ catBtns.forEach(btn => {
         e.target.classList.add('active');
         const filterValue = e.target.dataset.filter;
         renderTypoList(filterValue);
-        document.getElementById('right-content').scrollTo({ top: 0, behavior: 'smooth' });
+        
+        if (window.innerWidth <= 1024) {
+            // Su mobile porta la view giù ai progetti
+            document.getElementById('right-content').scrollIntoView({ behavior: 'smooth' });
+        } else {
+            // Su desktop scrolla internamente la lista
+            document.getElementById('right-content').scrollTo({ top: 0, behavior: 'smooth' });
+        }
     });
 });
 
